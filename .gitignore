@@ -25,3 +25,4 @@ hs_err_pid*
 /qatestautomation/qatestautomation.iml
 /.idea/
 /qatestautomation/target/
+/qa-frontend/qafrontend.iml
