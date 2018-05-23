@@ -1,9 +1,8 @@
 package com.jsystems.testautomation.jupiter;
 
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
+import com.jsystems.testautomation.GamePlay;
+import org.junit.jupiter.api.*;
 
 import java.math.BigDecimal;
 
@@ -18,6 +17,7 @@ public class JUpiterTest extends ConfigJUpiter {
     String testowyString = "firstTest";
 
     @Test
+
     @DisplayName("Test for strings")
     public void firstTest() {
 
@@ -68,6 +68,14 @@ public class JUpiterTest extends ConfigJUpiter {
                 assertTrue(new BigDecimal("0.2").multiply(new BigDecimal("0.2")).doubleValue() == 0.04);
             }
         }
+    }
+
+    @Test
+    @Tag("All")
+    @DisplayName("Exception test")
+    public void exceptionTest(){
+        GamePlay gameplayer = new GamePlay();
+        assertThrows(IllegalArgumentException.class, ()->gameplayer.play(0));
     }
 
 

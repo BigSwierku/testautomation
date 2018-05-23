@@ -19,7 +19,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
-
+    <!--<profiles>-->
+        <!--<profile>-->
+            <!--<id>allTest</id>-->
+            <!--<properties>-->
+                <!--<tests>All</tests>-->
+            <!--</properties>-->
+        <!--</profile>-->
+    <!--</profiles>-->
 
     <build>
         <plugins>
@@ -59,10 +66,14 @@
                         <version>5.0.1</version>
                     </dependency>
                 </dependencies>
+
                 <configuration>
                     <includes>
                         <include>**/*Test.java</include>
                     </includes>
+                    <!--<properties>-->
+                    <!--<includes>$(tests)</includes>-->
+                <!--</properties>-->
                 </configuration>
             </plugin>
         </plugins>
@@ -94,6 +105,12 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+        </dependency>
+
 
     </dependencies>
 
