@@ -1,8 +1,7 @@
-package com.jsystems.testautomation.pages;
+package com.jsystems.testautomation.frontedBDD.Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -16,6 +15,10 @@ public class BasePage {
     public void waitForVisibilityForElement(WebElement element, int maxWaitTime){
         WebDriverWait webDriverWait = new WebDriverWait(driver,maxWaitTime);
         webDriverWait.until(ExpectedConditions.visibilityOf(element));
+    }
+    public void waitForClickabilityForElement(WebElement element, int maxWaitTime){
+        WebDriverWait webDriverWait = new WebDriverWait(driver,maxWaitTime);
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
 }

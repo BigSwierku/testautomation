@@ -1,5 +1,6 @@
-package com.jsystems.testautomation.pages;
+package com.jsystems.testautomation.frontedBDD.Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,10 +17,13 @@ public class MainLogedPage extends BasePage {
         PageFactory.initElements(driver,this);
     }
 
+    @FindBy(css="a[data-tip-target=\"me\"]")
+    public WebElement avatar;
+    //public WebElement mySite = driver.findElement(By.cssSelector("a[data-tip-target=\"my-sites\"] span"));
+
     public boolean isContentPresent(){
-        String title=driver.getTitle();
-        System.out.println(title);
-        assertTrue(title.equals("Log In — WordPress.com"));
+
+       // assertTrue(driver.getTitle().equals("Log In — WordPress.com"));
         return true;
     }
 
