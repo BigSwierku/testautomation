@@ -131,7 +131,10 @@
             <version>RELEASE</version>
             <scope>compile</scope>
         </dependency>
-
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+        </dependency>
     </dependencies>
 
     <artifactId>qaapi</artifactId>

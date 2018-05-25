@@ -1,9 +1,9 @@
 package com.jsystems.api;
 
 public class TestUser {
-    public Long id;
-    public String name;
-    public String surname;
+    private Long id;
+    private String name;
+    private String surname;
 
     public TestUser(Long id, String name, String surname) {
         this.id = id;
